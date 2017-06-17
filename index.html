@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>FOTOLOG - ..::ÁrÉnItÁ .´´´ ÁmíGáS x CrÉw::..</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -11,7 +12,7 @@
 	<header>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 col-xs-12 logo">
+				<div class="col-md-3 col-xs-12 logo"><!-- vista mobile xs -->
 					<img src="img/fotolog-logo.png" alt="">
 				</div>
 			</div>
@@ -26,23 +27,48 @@
 	</section>
 	<section id="contenido">
 		<div class="container">
-			<div class="col-md-2 col-xs-2 recientes">
+			<div class="col-md-2 hidden-xs recientes">
 				<a href="" class="fotos">Fotos Recientes</a>
-				<img src="img/jarcor.jpg">
-				<img src="img/foto_0920140822124434.jpg" alt="">
-				<img src="img/i-62869.jpeg" alt="">
-				<img src="img/p3.jpg" alt="">
+				<img src="img/jarcor.jpg" class="img-circle img-thumbnail"><!-- cambio estilo imágenes presentes al lado izquier y derecho de la panatalla -->
+				<img src="img/foto_0920140822124434.jpg" alt="" class="img-circle img-thumbnail">
+				<img src="img/i-62869.jpeg" alt="" class="img-circle img-thumbnail">
+				<img src="img/p3.jpg" alt="" class="img-circle img-thumbnail">
 			</div>
-			<div class="col-md-8 col-xs-8">
-				<img src="img/m1_768_11MS.jpg" alt="">
-				<p>AqUi EStAáá Mi AmIgA ArEnItAáÁÁ</p>
+			<div class="col-md-8 col-xs-12">
+				<img src="img/m1_768_11MS.jpg" alt="" class="img-responsive">
+				<p class="hidden-xs">AqUi EStAáá Mi AmIgA ArEnItAáÁÁ</p>
 			</div>
-			<div class="col-md-2 col-xs-2 recientes">
+				
+			<!-- creación de nueva sección solo visible para mobil. las imagenes recientes de los costados
+			pasan abajo de la imagen principal -->
+			<section class="container">
+			<div class="row">
+			<div class="visible-xs col-xs-12 recientes">
+			<a href="" class="fotos">Fotos Recientes</a><br><br>
+			<div class="visible-xs col-xs-3">
+				<img src="img/jarcor.jpg" class="img-circle img-thumbnail">
+			</div>
+
+			<div class="visible-xs col-xs-3">
+				<img src="img/foto_0920140822124434.jpg" alt="" class="img-circle img-thumbnail">
+			</div>
+
+			<div class="visible-xs col-xs-3">
+				<img src="img/i-62869.jpeg" alt="" class="img-circle img-thumbnail">
+			</div>
+
+			<div class="visible-xs col-xs-3">
+				<img src="img/p3.jpg" alt="" class="img-circle img-thumbnail">
+				</div>		
+			</div>
+			</div>
+
+			<div class="col-md-2 hidden-xs recientes">
 				<a href="" class="fotos">Fotos Recientes</a>
-				<img src="img/jarcor.jpg">
-				<img src="img/foto_0920140822124434.jpg" alt="">
-				<img src="img/i-62869.jpeg" alt="">
-				<img src="img/p3.jpg" alt="">
+				<img src="img/jarcor.jpg" class="img-circle img-thumbnail">
+				<img src="img/foto_0920140822124434.jpg" alt="" class="img-circle img-thumbnail">
+				<img src="img/i-62869.jpeg" alt="" class="img-circle img-thumbnail">
+				<img src="img/p3.jpg" alt="" class="img-circle img-thumbnail">
 			</div>
 		</div>
 	</section>
@@ -55,7 +81,10 @@
 						<input type="text" id="clave">
 						<h3>Comentario</h3>
 						<textarea id="valor"></textarea>
+						<button type="button" id="boton-guardar">Guardar</button><!-- creación botones para guardar información y luego limpiarla -->
+						<button type="button" id="boton-limpiar">Limpiar Datos</button>
 					</form>
+					<div id="contenedor"></div><!-- contenedor de la información ingresada por el usuario -->
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: beige;
   color:black;
 }
 
@@ -61,3 +61,12 @@ footer{
 
 /* Estilos comentarios */
 
+#caja-comentarios{
+  background-color: #f890e5;/*color contenedor de los comentarios*/
+  padding-left: 10px;
+  color: white;
+}
+
+.fotos{
+  color:  #f890e5;
+}
